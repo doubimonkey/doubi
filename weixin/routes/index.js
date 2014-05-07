@@ -9,13 +9,14 @@ var router = express.Router();
 
 /* check signature. */
 router.get('/', function(req, res) {
-    var signature = req.signature;
+	var _get = url.parse(req.url, true).query; 
+    var signature = _get.signature;
     console.log("signature:"+signature);
-    var timestamp = req.timestamp;
+    var timestamp = _get.timestamp;
     console.log("timestamp:"+timestamp);
-    var nonce = req.nonce;
+    var nonce = _get.nonce;
     console.log("nonce:"+nonce);
-    var echostr = req.echostr;
+    var echostr = _get.echostr;
     console.log("echostr:"+echostr);
   
 
