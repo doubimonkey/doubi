@@ -4,7 +4,7 @@ var checkSignature=require('./checkSignature');
 var parsexml=require('./parsexml');
 var replydata=require('./replydata');
 var config=require('../config');
-
+var url = require('url');
 var router = express.Router();
 
 /* check signature. */
