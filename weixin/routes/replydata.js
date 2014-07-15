@@ -22,7 +22,7 @@ module.exports=function(data){
     }
     console.log(msg);
 
-    var response = [ { xml: [  { ToUserName : { _cdata: data.FromUserName }} , {FromUserName : { _cdata: data.ToUserName }} ,{CreateTime : time.toString()}, {MsgType : { _cdata: "text"}} , {content : { _cdata: msg }} ] } ];
+    var response = [ { xml: [  { ToUserName : { _cdata: data.FromUserName }} , {FromUserName : { _cdata: data.ToUserName }} ,{CreateTime : time.toString()}, {MsgType : { _cdata: "text"}} , {Content : { _cdata: msg }} ] } ];
 
     var result = XML(response, true);
     console.log(result);
