@@ -20,7 +20,7 @@ router.get('/', function(req, res) {
     console.log("echostr:"+echostr);
   
 
-    if(checkSignature(signature,timestamp,nonce,token)){
+    if(checkSignature(signature,timestamp,nonce,config.token)){
 
         res.send(echostr);
 
